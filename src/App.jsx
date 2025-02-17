@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/satellite")
+    fetch("https://backend-five-alpha-72.vercel.app/")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
