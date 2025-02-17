@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("https://backend-five-alpha-72.vercel.app/")
+    fetch("https://backend-five-alpha-72.vercel.app/api/satellite")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -32,6 +32,7 @@ function App() {
         setLoadData(false);
       })
       .catch((error) => {
+        console.error("Fetch error:", error);
         setErrorData(true);
         setLoadData(false);
       });
